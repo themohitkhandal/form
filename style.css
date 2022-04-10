@@ -1,20 +1,30 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
-}
-.theme1{
-    background-image: url('image.jpg');
-    background-size: 100% 150%;
-    
-}
-.newTheme{
-    background-image: url('image2.jpg');
-    background-size: 100% 150%;
+
 }
 
-.container{
+.theme1 {
+    background-image: url('image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    /* background-size: 100% 150%; */
+
+}
+
+.newTheme {
+    background-image: url('image2.jpg');
+    /* background-size: 100% 150%; */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+
+.container {
     margin: 60px;
     text-align: center;
     display: flex;
@@ -22,13 +32,17 @@
     align-items: center;
     flex-direction: column;
 }
-.container #title, #title2{
+
+.container #title,
+#title2 {
     color: whitesmoke;
 }
-.container #title2{
+
+.container #title2 {
     display: none;
 }
-.container input{
+
+.container input {
     border-radius: 10px;
     border: 2px solid black;
     margin: 20px;
@@ -36,7 +50,8 @@
     width: 60%;
     box-shadow: 0px 0px 20px whitesmoke;
 }
-.flex-buttons{
+
+.flex-buttons {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -44,13 +59,19 @@
     margin: auto;
     width: 60%;
 }
-.flex-buttons button{
+
+.flex-buttons button {
     box-shadow: 0px 0px 20px whitesmoke;
-    
+
 }
 
-@media only screen and (max-width: 480px){
-    .newTheme{
+.win{
+    color: rgb(17, 224, 17);
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+    .newTheme {
         background-image: url('image3.jpg');
         background-size: 100% 150%;
     }
