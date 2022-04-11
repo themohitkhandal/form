@@ -1,12 +1,9 @@
 const change_theme = document.getElementById('changeTheme');
 const body = document.body;
-const title2 = document.getElementById('title2')
 const title = document.getElementById('title')
 const newTitle = document.createElement('h1');
-newTitle.style = "color:white;"
-// const newText = document.createTextNode("Hello Duniya")
+newTitle.style = "color:whitesmoke;"
 newTitle.textContent = "Classroom"
-// newTitle.appendChild(newText)
 
 
 change_theme.addEventListener('click', () => {
