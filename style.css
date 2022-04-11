@@ -6,7 +6,7 @@
 }
 
 .theme1 {
-    background-image: url('image.jpg');
+    background: url('black_board.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,7 +16,7 @@
 }
 
 .newTheme {
-    background-image: url('image2.jpg');
+    background-image: url('book-2.jpg');
     /* background-size: 100% 150%; */
     background-position: center;
     background-repeat: no-repeat;
@@ -45,7 +45,7 @@
 .container input {
     border-radius: 10px;
     border: 2px solid black;
-    margin: 20px;
+    /* margin: 20px; */
     padding: 10px;
     width: 60%;
     box-shadow: 0px 0px 20px whitesmoke;

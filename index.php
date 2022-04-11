@@ -51,7 +51,7 @@ if(isset($_POST['name'])) {
     <title>School Trip</title>
 </head>
 
-<body class="theme1">
+<body class="theme1" >
     <?php if($insert == true){
             echo "<div style='color:rgb(17, 224, 17);'>Success</div>";
     }
