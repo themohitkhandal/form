@@ -53,14 +53,13 @@ if(isset($_POST['name'])) {
 
 <body class="theme1" >
     <?php if($insert == true){
-            echo "<div style='color:rgb(17, 224, 17);'>Success</div>";
+            echo "<div class='successful'>Success</div>";
     }
         
     ?>
     <form action="index.php" method="post">
         <div class="container">
             <h1 title="School" id="title">Welcome to School Trip Form</h1>
-            <!-- <h1 id="title2">Hello World</h1> -->
             <input type="text" name="name" id="name" placeholder="Name" required>
             <input type="text" name="phone" id="phone" placeholder="Phone" required>
             <input type="email" name="email" id="email" placeholder="E-Mail" required>
