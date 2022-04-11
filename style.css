@@ -25,7 +25,7 @@
 }
 
 .container {
-    margin: 60px;
+    margin: 60px 0px 30px 0px;
     text-align: center;
     display: flex;
     justify-content: space-around;
@@ -33,8 +33,7 @@
     flex-direction: column;
 }
 
-.container #title,
-#title2 {
+.container #title{
     color: whitesmoke;
 }
 
@@ -63,15 +62,18 @@
 
 }
 
-.successful{
+.successful {
     color: rgb(17, 224, 17);
     font-size: 20px;
     text-align: center;
 }
 
 @media only screen and (max-width: 480px) {
-    .newTheme {
-        background-image: url('image3.jpg');
-        background-size: 100% 150%;
+    .theme2, .theme1 {
+        background-image: url('kid.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        background-size: cover;
     }
 }
