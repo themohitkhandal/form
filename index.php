@@ -1,6 +1,7 @@
 <?php
 $insert = false;
-if(isset($_POST['name'])) {
+$nameErr = "";
+if(isset($_POST['name']) && $_SERVER['REQUEST_METHOD'] == "POST") {
     //Initialising Variables
     $username = "root";
     $password = "";
@@ -14,12 +15,24 @@ if(isset($_POST['name'])) {
         echo "Connection Failed!" . $con->error;
     }
     
+    //Define variables and set to empty value
+    $name = $phone = $email = $where = "";
+
+    //Function to check any special char
+    function test_input($data){
+        $data = trim($data);
+        $data = stripcslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
     //Collecting Post variables
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-    $where = $_POST['whereTo'];
+    $name = test_input($_POST['name']);
+    $phone = test_input($_POST['phone']);
+    $email = test_input($_POST['email']);
+    $where = test_input($_POST['whereTo']);
     
+
     //SQL Query
     $sql = "INSERT INTO `form`.`formdetails`(`id`, `name`, `phone`, `email`, `whereTo`) VALUES ('id','$name','$phone','$email','$where')";
 
@@ -33,6 +46,8 @@ if(isset($_POST['name'])) {
     //Close Connection
     $con->close();
 
+} else{
+    $nameErr = "Enter a valid name!";
 }
 ?>
 
@@ -52,14 +67,13 @@ if(isset($_POST['name'])) {
 </head>
 
 <body class="theme1" >
-    <?php if($insert == true){
-            echo "<div class='successful'>Success</div>";
-    }
-        
-    ?>
-    <form action="index.php" method="post">
+    
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
         <div class="container">
             <h1 title="School" id="title">Welcome to School Trip Form</h1>
+            <?php if($insert == true){
+            echo "<div class='successful'>Success</div>";}
+            ?>
             <input type="text" name="name" id="name" placeholder="Name" required>
             <input type="text" name="phone" id="phone" placeholder="Phone" required>
             <input type="email" name="email" id="email" placeholder="E-Mail" required>
